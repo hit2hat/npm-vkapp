@@ -1,6 +1,6 @@
 [
     {
-        "title": "ВКонакте",
+        "title": "ВКонтакте",
         "packages": [
             {
                 "name": "@vkontakte/vkui",

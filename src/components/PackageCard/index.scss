@@ -1,0 +1,22 @@
+.package-card {
+    width: 250px;
+    height: 125px;
+    background: black;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__name {
+        font-size: 14px;
+        font-weight: bold;
+        margin: 5px 10px 0 10px;
+    }
+
+    &__text {
+        font-size: 12px;
+        text-align: center;
+        margin: 0 10px;
+    }
+}

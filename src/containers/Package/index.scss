@@ -1,0 +1,7 @@
+.Group > :not(.Header):first-child {
+    margin-top: 0 !important;
+}
+
+.Header__content {
+    padding-bottom: 0 !important;
+}

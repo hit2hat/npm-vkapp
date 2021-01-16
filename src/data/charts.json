@@ -1,0 +1,44 @@
+[
+    {
+        "title": "ВКонакте",
+        "packages": [
+            {
+                "name": "@vkontakte/vkui",
+                "text": "Библиотека UI компонентов для React",
+                "icon": "Icon28LogoVkOutline"
+            },
+            {
+                "name": "@vkontakte/vk-bridge",
+                "text": "Модуль для общения сервиса с VK",
+                "icon": "Icon28LogoVkOutline"
+            },
+            {
+                "name": "@vkontakte/vk-tunnel",
+                "text": "Прокси для разработки сервисов",
+                "icon": "Icon28LogoVkOutline"
+            },
+            {
+                "name": "@vkontakte/vk-miniapps-deploy",
+                "text": "Утилита для деплоя на VK Hosting",
+                "icon": "Icon28LogoVkOutline"
+            }
+        ]
+    },
+    {
+        "title": "RAPPS",
+        "packages": [
+            {
+                "name": "@vkdev/vk-sandbox",
+                "text": "Эмулятор для разработки сервисов",
+                "icon": "Icon28CubeBoxOutline",
+                "background": "linear-gradient(135deg, rgb(255, 119, 61) 0%, rgb(255, 71, 0) 100%)"
+            },
+            {
+                "name": "vkui-navigator",
+                "text": "Модуль навигации для VK Mini Apps",
+                "icon": "Icon28CubeBoxOutline",
+                "background": "linear-gradient(135deg, rgb(255, 119, 61) 0%, rgb(255, 71, 0) 100%)"
+            }
+        ]
+    }
+]

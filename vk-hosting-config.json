@@ -1,0 +1,21 @@
+{
+  "static_path": "build",
+  "app_id": 7727957,
+  "sandbox": {
+    "url": "http://localhost:10888",
+    "launch_params": {
+      "access_token_settings": "",
+      "are_notifications_enabled": 1,
+      "is_app_user": 1,
+      "is_favorite": 1,
+      "language": "ru",
+      "platform": "mobile_iphone",
+      "ref": "other"
+    }
+  },
+  "endpoints": {
+    "mobile": "index.html",
+    "mvk": "index.html",
+    "web": "index.html"
+  }
+}

@@ -7,6 +7,9 @@ import bridge from '@vkontakte/vk-bridge';
 import '@vkontakte/vkui/dist/vkui.css';
 
 import App from './containers/App';
+import { schemeChanger } from './utils/schemeChanger';
+
 bridge.send('VKWebAppInit');
+bridge.subscribe(schemeChanger);
 
 ReactDOM.render(<App />, document.getElementById('root'));

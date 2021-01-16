@@ -5,6 +5,7 @@ import { getPackageByName, search as searchPackages } from '../../network/api';
 
 import Home from '../Home';
 import Package from '../Package';
+import bridge from "@vkontakte/vk-bridge";
 
 const App = () => {
 	const [ activePanel, setActivePanel ] = useState('home');
@@ -15,17 +16,19 @@ const App = () => {
 	const [ searchResults, setSearchResults ] = useState([]);
 	const [ searchLoading, setSearchLoading ] = useState(false);
 
-	const openPackage = (name) => {
+	const openPackage = (name) => new Promise((resolve) => {
 		setShowLoader(true);
 		getPackageByName(name)
 			.then((data) => {
 				setSelectedPackage(data);
 				setActivePanel('package');
 			})
+			.catch(() => null)
 			.finally(() => {
 				setShowLoader(false);
+				resolve();
 			});
-	};
+	});
 
 	const search = (text) => {
 		setSearchLoading(true);
@@ -44,6 +47,18 @@ const App = () => {
 		setSearchResults([]);
 		setSearchLoading(false);
 	}, [ searchMode ]);
+
+	useEffect(() => {
+		async function load() {
+			if (!!window.location.hash) {
+				await openPackage(window.location.hash.slice(1));
+			}
+
+			bridge.send('VKWebAppInit');
+		}
+
+		load();
+	}, []);
 
 	return (
 		<View

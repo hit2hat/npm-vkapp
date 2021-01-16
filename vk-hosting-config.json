@@ -3,6 +3,7 @@
   "app_id": 7727957,
   "sandbox": {
     "url": "http://localhost:10888",
+    "hash": "@vkontakte/vkui",
     "launch_params": {
       "access_token_settings": "",
       "are_notifications_enabled": 1,

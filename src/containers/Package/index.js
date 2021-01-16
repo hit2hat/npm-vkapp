@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Panel, PanelHeader, PanelHeaderBack, Header, Div, Group, Tabs, TabsItem, HorizontalScroll, List, Cell, Avatar, SimpleCell, InfoRow } from '@vkontakte/vkui';
+import bridge from '@vkontakte/vk-bridge';
+import { Panel, PanelHeader, PanelHeaderBack, Header, Div, Group, Tabs, TabsItem, HorizontalScroll, List, Cell, Avatar, SimpleCell, InfoRow, CellButton, Separator } from '@vkontakte/vkui';
+import { Icon28ShareOutline } from '@vkontakte/icons';
 import { fireEvent } from '../../utils/fireEvent';
 import './index.scss';
 
@@ -97,6 +99,15 @@ const Package = ({ id, openPanel, selectedPackage }) => {
                                     </InfoRow>
                                 </SimpleCell>
                             )}
+                            <Separator />
+                            <CellButton
+                                before={<Icon28ShareOutline />}
+                                onClick={() => bridge.send('VKWebAppShare', {
+                                    link: `https://vk.com/app7727957#${selectedPackage.package}`
+                                })}
+                            >
+                                Поделиться
+                            </CellButton>
                         </Group>
                         <Header>Статистика скачиваний</Header>
                         <Div style={{ overflow: 'hidden', paddingBottom: 0 }}>
